@@ -8,7 +8,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-1ch-relay-esp8266/athom-1ch-relay-esp8266.ota.bin",
-        "md5": "945b19bf87bee52e95729ad653a3ca46"
+        "md5": "6d3bf5ed16e810bfc2b0278a51276538"
       },
       "parts": [
         {
@@ -21,7 +21,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-1gang-switch-esp8266/athom-1gang-switch-esp8266.ota.bin",
-        "md5": "938d94767207cfe5cc26edd7cc710fa6"
+        "md5": "8ecb5296b2a4f295830a34bdc5aa1de1"
       },
       "parts": [
         {
@@ -34,7 +34,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-1gang-switch-v2-esp8266/athom-1gang-switch-v2-esp8266.ota.bin",
-        "md5": "5095b3c4ca35e6c95bdbbd5202bf105e"
+        "md5": "b0c71c06ce6326bfdd2520652749bfe2"
       },
       "parts": [
         {
@@ -47,7 +47,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-2ch-relay-esp8266/athom-2ch-relay-esp8266.ota.bin",
-        "md5": "de216f29c874e6b6cb3695369a20167d"
+        "md5": "cd8b5a1afe9a9db8be131b3217e6fa5a"
       },
       "parts": [
         {
@@ -60,7 +60,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-2gang-switch-esp8266/athom-2gang-switch-esp8266.ota.bin",
-        "md5": "b55ad4e16e22206bf58985dd93f45020"
+        "md5": "f12c4a0856ffae127fbda3814cca6573"
       },
       "parts": [
         {
@@ -73,7 +73,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-2gang-switch-v2-esp8266/athom-2gang-switch-v2-esp8266.ota.bin",
-        "md5": "095464aa4ea6a211065545f26e709933"
+        "md5": "a8b0deea383980134978eb5d7b5a1cd7"
       },
       "parts": [
         {
@@ -86,7 +86,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-3gang-switch-esp8266/athom-3gang-switch-esp8266.ota.bin",
-        "md5": "090f3918dc0be4b7e3d977f4a9169d74"
+        "md5": "c9ded0b13ea3392cf4f0c60e47659b23"
       },
       "parts": [
         {
@@ -99,7 +99,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-4ch-relay-esp8266/athom-4ch-relay-esp8266.ota.bin",
-        "md5": "0af1e5a4d3acaddb1ec291a07531afa0"
+        "md5": "c2d08f569f079b4d04eebd061578140a"
       },
       "parts": [
         {
@@ -112,7 +112,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-4gang-switch-esp8266/athom-4gang-switch-esp8266.ota.bin",
-        "md5": "52ba41af36be8fe04e607416761ddbd6"
+        "md5": "091b10bd0b09b18ac5d3fb34c9a79e99"
       },
       "parts": [
         {
@@ -125,7 +125,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-8ch-relay-esp8266/athom-8ch-relay-esp8266.ota.bin",
-        "md5": "ef880fcd58f7afa29ab0081eaf721127"
+        "md5": "de23324ad8e33cd8484f29fa927525ca"
       },
       "parts": [
         {
@@ -138,7 +138,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-cb02-switch-esp8266/athom-cb02-switch-esp8266.ota.bin",
-        "md5": "0be929308f6a51bba99fcf921822b41a"
+        "md5": "286e5de3626068b87d949756039deb87"
       },
       "parts": [
         {
@@ -151,7 +151,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-garage-door-esp8266/athom-garage-door-esp8266.ota.bin",
-        "md5": "ec39763532a2fffceb1eb7f8539368c2"
+        "md5": "6f90b09deaafe6e0ab9950ea45d85195"
       },
       "parts": [
         {
@@ -164,7 +164,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-mini-switch-esp8266/athom-mini-switch-esp8266.ota.bin",
-        "md5": "98a3bc35562ac632cc5a1b9a42b3345a"
+        "md5": "4bcb9e86670d08e993982ff8d1743da9"
       },
       "parts": [
         {
@@ -177,7 +177,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-presence-sensor-esp8266/athom-presence-sensor-esp8266.ota.bin",
-        "md5": "efa4082b2fc8106d51fe31f96e9563db"
+        "md5": "cb535b55a699ddf5e748c8bc3f5ca759"
       },
       "parts": [
         {
@@ -190,7 +190,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-rgb-light-esp8266/athom-rgb-light-esp8266.ota.bin",
-        "md5": "b1bddfa76b64e82f82d7e9dc3e0f9c31"
+        "md5": "e31ea6ddb34d9a9f1e0b02b0b1049d12"
       },
       "parts": [
         {
@@ -203,7 +203,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-rgbcct-bulb-esp8266/athom-rgbcct-bulb-esp8266.ota.bin",
-        "md5": "da8c3fcbc0b2e276e2b8752c0d2c25f9"
+        "md5": "6edd60099c8775d6f4b3a99521cb0ee8"
       },
       "parts": [
         {
@@ -216,7 +216,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-rgbcw-bulb-esp8266/athom-rgbcw-bulb-esp8266.ota.bin",
-        "md5": "58b0b13e770916a4cec7fc959290fed4"
+        "md5": "b7ea06c4f036b2958a007cab370f2603"
       },
       "parts": [
         {
@@ -229,7 +229,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-rgbw-light-esp8266/athom-rgbw-light-esp8266.ota.bin",
-        "md5": "3275a04d2ae4db0c40f518dd0f99f565"
+        "md5": "78f5ccde13594dbab969dd84b4c18008"
       },
       "parts": [
         {
@@ -242,7 +242,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-smart-plug-esp8266/athom-smart-plug-esp8266.ota.bin",
-        "md5": "7e653dfd3d3d7c2df04c7b62b8720e24"
+        "md5": "e8522d4da18735f67607af264e3367fa"
       },
       "parts": [
         {
@@ -255,7 +255,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-smart-plug-v2-esp8266/athom-smart-plug-v2-esp8266.ota.bin",
-        "md5": "4a4ab11ff6718a5e75a8076bc7582019"
+        "md5": "877a291ed06651015c29e291e0a63a5e"
       },
       "parts": [
         {
@@ -268,7 +268,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-wall-outlet-esp8266/athom-wall-outlet-esp8266.ota.bin",
-        "md5": "7828144284b64d525b67567a9cf77bf0"
+        "md5": "0b2f90fb8d010a327788f93d5c3d24d6"
       },
       "parts": [
         {
@@ -281,7 +281,7 @@
       "chipFamily": "ESP8266",
       "ota": {
         "path": "athom-without-relay-plug-esp8266/athom-without-relay-plug-esp8266.ota.bin",
-        "md5": "0173a1540d268a422175c27b9b3b2965"
+        "md5": "7ea01bac8f4adfa1a0e32a317c734cdf"
       },
       "parts": [
         {
