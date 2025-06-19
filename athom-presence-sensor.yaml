@@ -1,16 +1,16 @@
 substitutions:
   # Default name
-  name: "athom-presence-sensor"
+  name: "athom-presence-sensor-v3"
   # Default friendly name
   friendly_name: "Athom Presence Sensor"
   # Allows ESP device to be automatically linked to an 'Area' in Home Assistant. Typically used for areas such as 'Lounge Room', 'Kitchen' etc
   room: ""
   # Description as appears in ESPHome & top of webserver page
-  device_description: "athom mmwave radar human presence sensor"
+  device_description: "athom esp32-c3 mmwave radar human presence sensor"
   # Project Name
-  project_name: "Athom Technology.Athom Presence Sensor"
+  project_name: "Athom Technology.Athom PS01C3 Presence Sensor"
   # Projection version denotes the release version of the yaml file, allowing checking of deployed vs latest version
-  project_version: "v1.0.3"
+  project_version: "v3.0.3"
   # Define a domain for this device to use. i.e. iot.home.lan (so device will appear as athom-smart-plug-v2.iot.home.lan in DNS/DHCP logs)
   dns_domain: ".local"
   # Set timezone of the smart plug. Useful if the plug is in a location different to the HA server. Can be entered in unix Country/Area format (i.e. "Australia/Sydney")
@@ -38,16 +38,23 @@ esphome:
   project:
     name: "${project_name}"
     version: "${project_version}"
+  platformio_options:
+    board_build.flash_mode: dio
 
-esp8266:
-  board: esp8285
-  restore_from_flash: true
+esp32:
+  board: esp32-c3-devkitm-1
+  flash_size: 4MB
+  variant: ESP32C3
+  framework:
+    type: arduino
+    version: recommended
 
 preferences:
   flash_write_interval: 1min
 
 logger:
   level: ${log_level}
+  hardware_uart: UART0
   baud_rate: 115200
 
 api:
@@ -74,25 +81,37 @@ wifi:
 
 captive_portal:
 
+esp32_improv:
+  authorizer: none
+
 dashboard_import:
   package_import_url: github://Samsonite79/athom-configs/athom-presence-sensor.yaml
+
+# esp32_ble_tracker:
+#   scan_parameters:
+#     interval: 1100ms
+#     window: 1100ms
+#     active: true
+
+# bluetooth_proxy:
+#   active: true
 
 light:
   - platform: status_led
     name: "Status LED"
     id: led
-    pin: GPIO16
+    pin: GPIO2
     disabled_by_default: true
     entity_category: config
 
 i2c:
-  sda: GPIO4
-  scl: GPIO5
+  sda: GPIO18
+  scl: GPIO19
   scan: true
 
 uart:
-  tx_pin: GPIO15
-  rx_pin: GPIO13
+  tx_pin: GPIO8
+  rx_pin: GPIO5
   baud_rate: 115200
   # debug:
   #   direction: BOTH
@@ -109,7 +128,7 @@ binary_sensor:
 
   - platform: gpio
     pin:
-      number: GPIO0
+      number: GPIO9
       mode: INPUT_PULLUP
       inverted: true
     name: "Button"
@@ -122,7 +141,7 @@ binary_sensor:
 
   - platform: gpio
     pin:
-      number: GPIO14
+      number: GPIO3
       mode:
         input: true
         pullup: true
@@ -141,7 +160,7 @@ binary_sensor:
 
   - platform: gpio
     pin:
-      number: GPIO12
+      number: GPIO4
       mode:
         input: true
         pullup: true
@@ -173,8 +192,9 @@ sensor:
   - platform: uptime
     name: "Uptime Sensor"
     id: uptime_sensor
-    entity_category: diagnostic
-    internal: true
+    type:
+      timestamp
+    entity_category: "diagnostic"
 
   - platform: wifi_signal
     name: "WiFi Signal dB"
@@ -426,31 +446,6 @@ text_sensor:
     icon: mdi:clock
     entity_category: diagnostic
 #    device_class: timestamp
-
-  #  Creates a sensor of the uptime of the device, in formatted days, hours, minutes and seconds
-  - platform: template
-    name: "Uptime"
-    entity_category: diagnostic
-    lambda: |-
-      int seconds = (id(uptime_sensor).state);
-      int days = seconds / (24 * 3600);
-      seconds = seconds % (24 * 3600);
-      int hours = seconds / 3600;
-      seconds = seconds % 3600;
-      int minutes = seconds /  60;
-      seconds = seconds % 60;
-      if ( days > 3650 ) {
-        return { "Starting up" };
-      } else if ( days ) {
-        return { (String(days) +"d " + String(hours) +"h " + String(minutes) +"m "+ String(seconds) +"s").c_str() };
-      } else if ( hours ) {
-        return { (String(hours) +"h " + String(minutes) +"m "+ String(seconds) +"s").c_str() };
-      } else if ( minutes ) {
-        return { (String(minutes) +"m "+ String(seconds) +"s").c_str() };
-      } else {
-        return { (String(seconds) +"s").c_str() };
-      }
-    icon: mdi:clock-start
 
 time:
   - platform: sntp
